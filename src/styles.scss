@@ -1,0 +1,167 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+$main-color:#0aad0a;
+$light-color:#f0f3f2;
+$shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+$font-family:'Encode Sans Expanded', sans-serif;
+$rating-color:#ffc908;
+
+::-webkit-scrollbar
+{
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-track
+{
+  background-color: $light-color;
+}
+::-webkit-scrollbar-thumb
+{
+  background-color: $main-color;
+}
+
+body{
+    font-family: $font-family !important;
+}
+.rating-color
+{
+    color: $rating-color;
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    color: black;
+    text-decoration: none;
+}
+// .product:hover
+// {
+//     box-shadow: $shadow;
+//     border: solid 1px $main-color;
+// }
+.product .btn
+{
+    transition: transform 1s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: $main-color;
+}
+.text-main-light
+{
+  color: $light-color
+}
+.bg-main
+{
+    background-color: v$main-color !important;
+}
+.bg-main-light
+{
+    background-color: $light-color !important;
+}
+.brd
+{
+    background-color: $light-color;
+    height: 2px;
+}
+
+.w-3
+{
+    width:3%;
+}
+.w-10
+{
+    width: 10%;
+}
+.w-7
+{
+    width: 7%;
+}
+
+.main-btn
+{
+  background-color: $main-color;
+  color: #fff;
+  border-radius: 5px;
+  border: unset;
+  cursor: pointer;
+  padding: 4px 8px;
+  &:disabled{
+    background-color: #078e076c;
+    color: #ffffff9c;
+    cursor: not-allowed;
+  }
+}
+
+.product
+{
+  border: .0625rem solid $main-color;
+  border-radius: 5px;
+  padding: 4px;
+  box-shadow: $shadow;
+  position: relative;
+  overflow: hidden;
+  &:hover
+  {
+    .heart{
+      right: 5px;
+    }
+    .main-btn
+    {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .heart
+  {
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    right: -50px;
+    z-index: 999;
+    cursor: pointer;
+    transition: right 0.8s;
+  }
+
+  .main-btn
+  {
+    transform: translateY(150%);
+    opacity: 0;
+    transition:all 0.8s;
+  }
+}
+
+
+.active-link
+{
+  color: #fff !important;
+  background-color: $main-color !important;
+  border-radius: 5px;
+
+}
+
+.form-control:focus {
+  border-color: $main-color !important;
+  box-shadow: 0 0 0 0;
+}
+
+
+
